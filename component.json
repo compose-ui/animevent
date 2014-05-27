@@ -1,0 +1,14 @@
+{
+  "name": "animevent",
+  "version": "0.0.1",
+  "repo": "compose-ui/animevent",
+  "dependencies": {
+    "kewah/css-animation-event-types": "*",
+    "fat/bean": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "main": "index.js"
+}
+
