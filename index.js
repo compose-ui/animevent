@@ -1,18 +1,19 @@
-var cssAnimEventTypes = getAnimationEventTypes();
+var cssAnimEventTypes = getAnimationEventTypes()
 var bean = require('bean')
 var supported = cssAnimEventTypes.start !== undefined
 
 module.exports = {
   on: on,
   off: off,
-  one: one
+  one: one,
+  types: cssAnimEventTypes
 }
 
 function setEvent(type, element, eventType, callback) {
   if(!supported) return callback()
 
   if (eventType = cssAnimEventTypes[eventType]) {
-      bean[type](element, eventType, callback)
+    bean[type](element, eventType, callback)
   } else {
     console.error("cssAnimEventTypes does not support event: " + eventType)
     return false
